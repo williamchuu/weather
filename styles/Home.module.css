@@ -10,7 +10,8 @@
 
 .lastUpdated {
   font-size: 0.8rem;
-  color: #686868;
+  color: #587c8a;
+  font-family: 'roboto', sans-serif;
 }
 
 .data {
@@ -34,6 +35,7 @@
   margin-top: 2rem;
   font-family: 'roboto', sans-serif;
   color: #587c8a;
+  font-weight: 500;
 }
 
 .weatherCont {
@@ -74,6 +76,9 @@
   margin-left: 5px;
 }
 
+.icon {
+  margin: 1rem;
+}
 
 .weather {
   font-size: 1rem;

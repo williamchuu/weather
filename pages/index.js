@@ -86,10 +86,11 @@ export default function Home() {
             <p className={styles.month}> {month} {weather.dt_txt.substr(8, 2)}, {weather.dt_txt.substr(0, 4)}</p>
             <div key={index}>
               <Image
+                className={styles.icon}
                 src={icon}
                 alt={icon}
-                width={100}
-                height={100}
+                width={60}
+                height={50}
                 priority
               />
               <div className={styles.degreeCont}>
