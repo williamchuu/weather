@@ -5,13 +5,12 @@
   align-items: center;
   padding: 3rem 8rem;
   min-height: 100vh;
-  background: rgb(173, 117, 146);
-  background: linear-gradient(357deg, rgba(173, 117, 146, 1) 0%, rgba(62, 50, 163, 1) 100%);
+  background: rgb(235, 234, 235);
 }
 
 .lastUpdated {
   font-size: 0.8rem;
-  color: #d7d7d7;
+  color: #686868;
 }
 
 .data {
@@ -24,6 +23,8 @@
   font-size: 1rem;
   padding: 2rem;
   font-family: 'roboto', sans-serif;
+  border-radius: 20px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
 }
 
 .footer {
@@ -32,7 +33,7 @@
   align-items: center;
   margin-top: 2rem;
   font-family: 'roboto', sans-serif;
-  color: rgb(255, 255, 255);
+  color: #587c8a;
 }
 
 .weatherCont {
@@ -41,15 +42,15 @@
 
 .weekday {
   font-weight: 700;
-  color: #ffffff;
+  color: #587c8a;
   text-align: center;
 }
 
 .month {
-  color: #88cee7;
+  color: #587c8a;
   line-break: none;
   text-align: center;
-  font-weight: 600;
+  font-weight: 400;
 }
 
 .degreeCont {
@@ -61,13 +62,13 @@
 
 .degree {
   font-size: 3rem;
-  color: #ffffff;
+  color: #587c8a;
   font-weight: 500;
 }
 
 .celsius {
   font-size: 1.2rem;
-  color: #ffffff;
+  color: #587c8a;
   font-weight: 200;
   margin-bottom: 20px;
   margin-left: 5px;
@@ -77,16 +78,12 @@
 .weather {
   font-size: 1rem;
   text-align: center;
-  color: #ecddea;
+  color: #587c8a;
+  font-weight: 400;
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 850px) {
   .data {
     flex-direction: column;
-  }
-
-  .main {
-    background: rgb(173, 117, 146);
-    background: linear-gradient(270deg, rgba(173, 117, 146, 1) 0%, rgba(62, 50, 163, 1) 100%);
   }
 }

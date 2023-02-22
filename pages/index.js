@@ -77,7 +77,7 @@ export default function Home() {
         }
 
         var now = new Date(weather.dt_txt);
-        var days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+        var days = ['SUNDAY', 'MONDAY', 'TUESDAY', 'WEDNESDAY', 'THURSDAY', 'FRIDAY', 'SATURDAY'];
         var day = days[now.getDay()];
 
         return (
