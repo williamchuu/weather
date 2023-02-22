@@ -94,10 +94,10 @@ export default function Home() {
                 priority
               />
               <div className={styles.degreeCont}>
-                <div className={styles.degree}>{weather.main.temp.toFixed(1)} </div>
-                <div className={styles.celsius}> °C</div>
+                <p className={styles.degree}>{weather.main.temp.toFixed(1)} </p>
+                <p className={styles.celsius}> °C</p>
               </div>
-              <div className={styles.weather}>{weather.weather[0].main}</div>
+              <p className={styles.weather}>{weather.weather[0].main}</p>
             </div>
           </div>
         )
