@@ -10,7 +10,7 @@ export default function Home() {
   const apiKey = process.env.NEXT_PUBLIC_API;
   const location = 'Vancouver';
   const units = 'metric';
-  const url = `http://api.openweathermap.org/data/2.5/forecast?q=${location}&units=${units}&appid=${apiKey}`;
+  const url = `https://api.openweathermap.org/data/2.5/forecast?q=${location}&units=${units}&appid=${apiKey}`;
 
   const [data, setData] = useState();
   const grabWeather = useRef(false);
