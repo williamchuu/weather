@@ -35,11 +35,11 @@ export default function Home() {
         var icon = '';
 
         if (weather.dt_txt.substr(5, 2) == 1) {
-          month = 'January';
+          month = 'Jan';
         } else if (weather.dt_txt.substr(5, 2) == 2) {
-          month = 'February';
+          month = 'Feb';
         } else if (weather.dt_txt.substr(5, 2) == 3) {
-          month = 'March';
+          month = 'Mar';
         } else if (weather.dt_txt.substr(5, 2) == 4) {
           month = 'April';
         } else if (weather.dt_txt.substr(5, 2) == 5) {
@@ -49,15 +49,15 @@ export default function Home() {
         } else if (weather.dt_txt.substr(5, 2) == 7) {
           month = 'July';
         } else if (weather.dt_txt.substr(5, 2) == 8) {
-          month = 'August';
+          month = 'Aug';
         } else if (weather.dt_txt.substr(5, 2) == 9) {
-          month = 'September';
+          month = 'Sept';
         } else if (weather.dt_txt.substr(5, 2) == 10) {
-          month = 'October';
+          month = 'Oct';
         } else if (weather.dt_txt.substr(5, 2) == 11) {
-          month = 'November';
+          month = 'Nov';
         } else if (weather.dt_txt.substr(5, 2) == 12) {
-          month = 'December';
+          month = 'Dec';
         }
 
         if (weather.weather[0].main == 'Clouds') {
@@ -81,19 +81,23 @@ export default function Home() {
         var day = days[now.getDay()];
 
         return (
-          <div key={index}>
-            <Image
-              src={icon}
-              alt={icon}
-              width={100}
-              height={100}
-              priority
-            />
-            <p>
-              {day} <br /> {month} {weather.dt_txt.substr(8, 2)}, {weather.dt_txt.substr(0, 4)}
-            </p>
-            <div>{weather.main.temp.toFixed(1)} °C</div>
-            <div>{weather.weather[0].main}</div>
+          <div className={styles.weatherCont}>
+            <p className={styles.weekday}>{day} </p>
+            <p className={styles.month}> {month} {weather.dt_txt.substr(8, 2)}, {weather.dt_txt.substr(0, 4)}</p>
+            <div key={index}>
+              <Image
+                src={icon}
+                alt={icon}
+                width={100}
+                height={100}
+                priority
+              />
+              <div className={styles.degreeCont}>
+                <div className={styles.degree}>{weather.main.temp.toFixed(1)} </div>
+                <div className={styles.celsius}> °C</div>
+              </div>
+              <div className={styles.weather}>{weather.weather[0].main}</div>
+            </div>
           </div>
         )
       }
@@ -124,17 +128,6 @@ export default function Home() {
       </Head>
       <main className={styles.main}>
 
-        <p>
-          Vancouver, BC Weather <br />
-          Last updated: {date}
-        </p>
-        <div>
-          <a
-            href=""
-            target=""
-            rel=""
-          />
-        </div>
         <Image
           className={styles.logo}
           src="/weather-forecast-logo.png"
@@ -143,11 +136,16 @@ export default function Home() {
           height={200}
           priority
         />
-        <p>
+
+        <p className={styles.data}>
           {data}
         </p>
-        <p>
+        <p className={styles.footer}>
           By William Chu
+        </p>
+        <p className={styles.lastUpdated}>
+          Vancouver, BC Weather <br />
+          Last updated: {date}
         </p>
       </main>
     </>
