@@ -12,6 +12,8 @@
   font-size: 0.8rem;
   color: #587c8a;
   font-family: 'roboto', sans-serif;
+  text-align: center;
+  display: flex;
 }
 
 .data {
