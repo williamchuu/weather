@@ -84,22 +84,22 @@ export default function Home() {
           <div key={index} className={styles.weatherCont}>
             <p className={styles.weekday}>{day} </p>
             <p className={styles.month}> {month} {weather.dt_txt.substr(8, 2)}, {weather.dt_txt.substr(0, 4)}</p>
-            <div key={index}>
-              <Image
-                className={styles.icon}
-                src={icon}
-                alt={icon}
-                width={60}
-                height={50}
-                priority
-              />
-              <div className={styles.degreeCont}>
-                <p className={styles.degree}>{weather.main.temp.toFixed(1)} </p>
-                <p className={styles.celsius}> °C</p>
-              </div>
-              <p className={styles.weather}>{weather.weather[0].main}</p>
+
+            <Image
+              className={styles.icon}
+              src={icon}
+              alt={icon}
+              width={60}
+              height={50}
+              priority
+            />
+            <div className={styles.degreeCont}>
+              <p className={styles.degree}>{weather.main.temp.toFixed(1)} </p>
+              <p className={styles.celsius}> °C</p>
             </div>
+            <p className={styles.weather}>{weather.weather[0].main}</p>
           </div>
+
         )
       }
     })
