@@ -81,7 +81,7 @@ export default function Home() {
         var day = days[now.getDay()];
 
         return (
-          <div className={styles.weatherCont}>
+          <div key={index} className={styles.weatherCont}>
             <p className={styles.weekday}>{day} </p>
             <p className={styles.month}> {month} {weather.dt_txt.substr(8, 2)}, {weather.dt_txt.substr(0, 4)}</p>
             <div key={index}>
@@ -141,9 +141,9 @@ export default function Home() {
           Last updated: {date}
         </p>
 
-        {/* <div className={styles.data}> */}
-        {data}
-        {/* </div> */}
+        <div className={styles.data}>
+          {data}
+        </div>
         <p className={styles.footer}>
           By William Chu
         </p>
