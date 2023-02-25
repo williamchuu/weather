@@ -141,9 +141,9 @@ export default function Home() {
           Last updated: {date}
         </p>
 
-        <div className={styles.data}>
-          {data}
-        </div>
+        {/* <div className={styles.data}> */}
+        {data}
+        {/* </div> */}
         <p className={styles.footer}>
           By William Chu
         </p>
